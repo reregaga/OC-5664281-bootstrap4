@@ -239,3 +239,23 @@ With Bootstrap, you can change the formatting of any text element by adding the 
 
 You can also change an element's text format to italic by adding the `.font-italic` class.
 
+### Images
+You can add an  `<img>`  element with a  `.card-img-top`  class.
+### Videos
+```html
+<div class="embed-responsive">
+    <iframe class="embed-responsive-item" src="..." allowfullscreen></iframe>
+</div>
+```
+|Modifier Class|Aspect Ratio|
+|-|-|
+|`.embed-responsive-21by9`|21:9|
+|`.embed-responsive-16by9`|16:9|
+|`.embed-responsive-4by3`|4:3|
+|`.embed-responsive-1by1`|1:1 (square)|
+```html
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+```
+
