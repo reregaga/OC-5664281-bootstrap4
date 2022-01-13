@@ -62,3 +62,4 @@ For specify the number of columns explicitly rather than leave it up to Bootstra
     </div>
 </div>
 ```
+**If you create more than 12 col elements**, row will be breaks, it will look like cols after 12 will be moved to next line.
