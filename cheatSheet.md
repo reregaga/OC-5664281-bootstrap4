@@ -96,3 +96,110 @@ To apply the appropriate Bootstrap class modifiers for these layout options, it�
 Here is a row with two child divs which take up different widths depending on the viewport size. Remembering that the class modifiers work upwards, the way to interpret the classes for the first of the row's child divs is:
 - `.col-6`  class means: for all screens with extra-small size (basically all screen sizes) upwards, allocate six columns to this div.
 - `.col-md-4`  class means: for all screens with a medium width (768px) upwards, allocate four columns to this div.
+
+# UI Components
+## Navigation bar
+Bootstrap has a powerful, responsive navigation bar component. It’s implemented using a  `nav`  element with a `.navbar` class. Navbars also require a  `.navbar-expand{-sm|-md|-lg|-xl}`  class for responsive collapsing. The  .navbar-expand  class affects the viewport width at which the navbar expands/collapses. For most websites, branding is displayed alongside the main navigation, so Bootstrap has a  `.navbar-brand`  class for it inside the navbar component. Add the site name in the branding element like below: 
+```html
+<nav class="navbar navbar-expand">
+    <a class="navbar-brand" href="...">Space School</a>
+</nav>
+```
+The navigation elements should be placed in an unordered list with the  `<ul>`,  `<li>`, and  `<a>`  elements given the classes shown in this snippet:
+```html
+<nav class="navbar navbar-expand">
+    <a class="navbar-brand" href="index.html">Space School</a>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Lessons</a>
+        </li>
+    </ul>
+</nav>
+```
+`.active` class is used to highlight one of the navigation items as the “active” or currently selected item.
+
+To **change the colors of the background and text** in the navbar, you can add some CSS styles. [Presets.](https://getbootstrap.com/docs/4.3/utilities/colors/#background-color) We’ll use the `.bg-dark`  utility class to change its color: `<nav class="navbar navbar-expand bg-dark">...</nav>`.
+Another handy set of Bootstrap color utilities are the  `.navbar-light`  and  `.navbar-dark`  classes. These classes adjust the color of any elements in the navbar, such as the brand and navigation links, to contrast with the chosen background. So you would add the  `.navbar-light`  class to a light-colored navbar. Alternatively, as in the case of our site, you would add the  `.navbar-dark`  class to a dark-colored navbar. `<nav class="navbar navbar-expand bg-dark navbar-dark">...</nav>`. Also you want the `<nav>` element of the header section to maintain the same width and padding as the rest of the page’s content and the background to expand to the full width. For this using two separate `.container` divs: one to wrap the `<nav>` element, and another to wrap the rest of the page's content outside of the header section.
+```html
+<!-- Header Section -->
+<div class="bg-dark"> <!-- 100% width -->
+    <div class="container"> <!-- width with margins -->
+        <div class="row">
+            <nav class="col navbar navbar-expand navbar-dark">
+                ...navbar content...
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Rest of page -->
+<div class="container"> <!-- width with margins -->
+    ...page content...
+</div>
+```
+**Note how the `.col` class was added to the `<nav>` element** to make sure it takes up the whole width of its enclosing `.row` div.
+
+**Implementing the responsive navigation** is to use the size-related class modifier on the  `.navbar-expand`  class of the  `<nav>`  element. 
+```html
+<nav class="col navbar navbar-expand-lg navbar-dark">
+    ...navbar content...
+</nav>
+```
+Next, **you need to add the toggle navigation button**. For a Bootstrap responsive navigation, add a button just after the branding, with the following attributes and content:
+```html
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+    <span class="navbar-toggler-icon"></span>
+</button>
+```
+The final step is to add the  `.collapse`  and  `.navbar-collapse`  classes to the  `<div>`  that wraps the unordered list containing the navigation links, as well as an `id` attribute with a value that matches that of the `data-target` attribute of the navbar toggle button—in this case  `navbarContent`.
+```html
+<div id="navbarContent" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+        ...nav items...
+    </ul>
+</div>
+```
+The  `.*collapse`  classes and `id` of the  `<div>`, the corresponding  `data-*`  attributes of the toggle button. Final version:
+```html
+<nav class="col navbar navbar-expand navbar-dark">
+    <a class="navbar-brand" href="index.html">Space School</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+```
+
+## Jumbotron
+To create a jumbotron, you simply add the `.jumbotron` class to a div: `<div class="jumbotron"><h1>Welcome!</h1></div>`.
+## Cards
+The card component is a flexible container that has options for a header, footer, and content. The basic setup for a card component is to assign a `.card` class to a  `<div>`  and add a child  `<div>`  with a `.card-body` class:
+```html
+<div class="card">
+    <div class="card-body">
+        This is the content of the card body
+    </div>
+</div>
+```
+The  `.card-body`  div can contain many types of card elements, but for now use these:
+- `.card-title` is added to a `<h*>` tag to style the title of the card.
+- `.card-text` is added to a  `<p>`  tag to style text such as lead-ins or descriptions.
+```html
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some text to build on the card title and make up the card's content.</p>
+    </div>
+</div>
+```
