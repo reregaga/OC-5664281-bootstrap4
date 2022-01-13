@@ -203,3 +203,39 @@ The  `.card-body`  div can contain many types of card elements, but for now use 
     </div>
 </div>
 ```
+## Text
+### Headings
+Bootstrap 4 has styling for all HTML headings from  `<h1>`  through to  `<h6>`. To apply the heading style, all you need to do is use the relevant  `<h*>`  tag. You also have the option of adding a  `.h1`  to  `.h6`  class to other tags like a  `<p>`  tag, if you can’t use the `<h*>` elements.
+
+### Lists
+Bootstrap 4 also applies styles to the HTML  `<ul>`  and  `<ol>`  list tags, so you get nicely-styled lists out of the box.  You can also remove the styling from a list by adding the  `.list-unstyled`  class. Another option is to create an inline list by adding a `.list-inline` class to the  `<ul>`  tag and  `.list-inline-item`  class to its  `<li>`  children.
+### Formatting
+Change the alignment of text within an element by adding one of the text alignment classes:
+|Class|Description|
+|-|-| 
+|`.text-left`| Left align text in an element|
+|`.text-center`| Center align text in an element|
+|`.text-right`|Right align text in an element|
+
+Text alignment in Bootstrap also has responsive classes:
+|Class|Description|
+|-|-|
+|`.text-sm-left`|Left align text on all small (sm) viewports or larger|
+|`.text-md-center`|Center align text on all medium (md) viewports or larger|
+|`.text-lg-right`|Right align text on all large (lg) viewports or larger|
+|`.text-xl-center`|Center align text on all extra-large (`xl`) viewports|
+
+There’s no need to use the extra-small (`xs`) class modifier. To achieve responsive alignment that changes with the viewport size, you can combine alignment classes in an element. `<p class=”text-center text-lg-left”>[The alignment of this text would change depending on the viewport size]</p>`
+
+### Font Weight
+With Bootstrap, you can change the formatting of any text element by adding the relevant  `.font-weight-*`  class. 
+|Class|Effect|
+|-|-|
+|`font-weight-bold`|Bold text|
+|`font-weight-bolder`|Bolder weight text (relative to the parent element|
+|`font-weight-normal`|Normal weight text|
+|`font-weight-light`|Light weight text|
+|`font-weight-lighter`|Lighter weight text (relative to the parent element)|
+
+You can also change an element's text format to italic by adding the `.font-italic` class.
+
