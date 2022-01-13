@@ -63,3 +63,36 @@ For specify the number of columns explicitly rather than leave it up to Bootstra
 </div>
 ```
 **If you create more than 12 col elements**, row will be breaks, it will look like cols after 12 will be moved to next line.
+# Responsive
+One of the reasons Bootstrap is so popular with front-end developers. It takes a **mobile-first approach**, meaning that its grid and components are designed to render correctly on small screens by default. 
+
+Good news is that you don't have to create a different layout for every screen size. You can make your work easier, while still creating great user experiences, by grouping all the screen sizes into different buckets, or size ranges, and generating layouts for each range. A typical example is to have one layout that's shown on devices with large screens (desktop computers); another for devices with medium-sized screens (tablets and small laptops); and a third for smaller devices (smartphones).
+
+| Size | Breakpoint | Class modifier |
+|-|-|-|
+| Extra small | <576px | none |
+| Small | ≥576px | `-sm` |
+| Medium | ≥768px | `-md` |
+| Large | ≥992px | `-lg` |
+| Extra large | ≥1200px | `-xl`|
+
+In the context of front-end design and development, a **breakpoint** is the point at which the layout changes. It is usually expressed as a number representing the number of pixels that represent the width of the viewport at which the breakpoint occurs.
+
+To apply the appropriate Bootstrap class modifiers for these layout options, it’s important to understand that they work **upwards**. For example, a class with the modifier `-md` will apply to all medium-size screens and bigger (in other words, viewports with a width ≥768px), unless there are class modifiers applied to an element for large (`-lg`) or extra-large (`-xl`). You can see that the **extra-small** size doesn’t need a class modifier. Since Bootstrap is **mobile-first, if you don't add a size-related class modifier**, they will automatically render the relevant grid elements and components to the smallest screens and will maintain the same layout as they grow.
+
+```html
+<div class="container">
+    ...
+    <div class="row">
+        <div class="col-6 col-md-4 col-lg-3">
+            One of two columns
+        </div>
+        <div class="col-6 col-md-8 col-lg-9">
+            One of two columns
+        </div>
+    </div>
+</div>
+```
+Here is a row with two child divs which take up different widths depending on the viewport size. Remembering that the class modifiers work upwards, the way to interpret the classes for the first of the row's child divs is:
+- `.col-6`  class means: for all screens with extra-small size (basically all screen sizes) upwards, allocate six columns to this div.
+- `.col-md-4`  class means: for all screens with a medium width (768px) upwards, allocate four columns to this div.
