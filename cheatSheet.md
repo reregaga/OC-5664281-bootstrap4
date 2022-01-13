@@ -318,3 +318,98 @@ Option to dismiss an alert after they’ve seen it. To to this, you need to add 
     </button>
 </div>
 ```
+
+### Forms
+The easiest way to add structure to your forms with Bootstrap is to create a  `<div>`  with a `.form-group`  class to contain the elements related to each form field:
+```html
+<form>
+    <div class=”form-group”>
+        ...[form field]...
+    </div>
+    <div class=”form-group”>
+        ...[form field]...
+    </div>
+    ....
+</div>
+```
+|Form control / type|Form control class|
+|-|-|
+|`<input type=”text”>`|`.form-control`|
+|`<input type="text" readonly>`|`.form-control-plaintext`|
+|`<textarea>`|`.form-control`|
+|`<select>`|`.form-control`|
+|`<input type="range">`|`.form-control-range`|
+
+For example, a text input field for the **time** input would have the following structure:
+```html
+<div class=”form-group”>
+    <label for=”timeInput”>Time:</label>
+    <input type=”text” class=”form-control” placeholder=”mm:ss” id=”timeInput”>
+</div>
+```
+The text area input for the **note** would have the following structure: 
+```html
+<div class=”form-group”>
+    <label for=”note”>Note:</label>
+    <textarea class=”form-control” id=”note” rows=”5” required>
+</div>
+```
+```html
+<button type="submit" class="btn btn-primary">Save Note</button>
+```
+
+### Utility Classes
+
+Bootstrap has a group of utility classes that you can **apply to most components and elements in your page that allow you to control aspects such as the color, shape, positioning, or sizing**. You’ve already come across some of them such as the `.bg-*` classes for controlling background color, the `.w-*` classes for controlling an element’s width, and the `.d-*` classes for controlling an element’s display property.
+
+Bootstrap has some easy-to-use classes that give elements some extra margins and padding. These are aptly named spacing utility classes. The classes are named using the format  `{property}{sides}-{size}`  for xs, and  `{property}{sides}-{breakpoint}-{size}`  for sm, md, lg, and xl.
+
+**Property** is one of:
+- m - for classes that **set margin**
+- p - for classes that **set padding**
+
+**Sides** is one of:
+- t - for classes that set margin-**top** or padding-top
+- b - for classes that set margin-**bottom** or padding-bottom
+- l - for classes that set margin-left or padding-left
+- r - for classes that set margin-right or padding-right
+- x - for classes that set both **\*-left and \*-right**
+- y - for classes that set both **\*-top and \*-bottom**
+- blank - for classes that set a margin or padding on **all 4 sides** of the element
+
+**Size** is one of:
+- 0 - for classes that eliminate the margin or padding by setting it to 0
+- 1 - (by default) for classes that set the margin or padding to 0.25 rem
+- 2 - (by default) for classes that set the margin or padding to 0.5 rem
+- 3 - (by default) for classes that set the margin or padding to 1 rem
+- 4 - (by default) for classes that set the margin or padding to 1.5 rem
+- 5 - (by default) for classes that set the margin or padding to 3 rem
+- auto - for classes that set the margin to auto
+
+For example:
+
+- To set the top margin of an element to 1.5 rem, add the class  `.mt-4`  (m for margin, t for top, 4 for 1.5 rem).
+- To set the padding of all sides of an element to 1 rem, add the class  `.p-3`  (p for padding, 3 for 1 rem).
+- To set the top and bottom padding of an element to 0, add the class  `.py-0`  (p for padding, y for top and bottom—i.e. both sides in the y-direction, and 0 for 0).
+- To set the left and right margin of an element to auto, add the class  `.mx-auto`  (m for margin, x for left and right—i.e. both sides in the x-direction, and auto for auto).
+
+To add a **border** to an element, or change the default border, add a `.border-{value}` class to the element. To control the color of an element’s border, `{value}` can be any of the options you came across with the  `.bg-*`  and  `.button-*`  classes. Namely, `primary, secondary, success, danger, warning, info, light, dark`.
+
+**Shadow** classes:
+|Class|Shadow effect|Default CSS values|
+|-|-|-|
+|`.shadow-none`|No shadow|`box-shadow: none`|
+|`.shadow-sm`|Small shadow|`box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)`|
+|`.shadow`|Regular shadow|`box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)`|
+|`.shadow-lg`|Large shadow|`box-shadow: 0 1rem 3rem rgba(0,0,0,.175)`|
+
+The **stretched link** utility class **automagically makes the containing block of a link clickable**. For example, if you add the class `.stretched-link` to the link in a card component, it will make the whole card clickable:
+```html
+<div class="card">
+    <img src="..." class="card-img-top">
+    <div class="card-body">
+        ...
+        <a href="..." class="btn btn-primary stretched-link">Go</a>
+    </div>
+</div>
+```
