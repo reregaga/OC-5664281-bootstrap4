@@ -259,3 +259,62 @@ You can add an  `<img>`  element with a  `.card-img-top`  class.
 </div>
 ```
 
+### Buttons
+To render a button in Bootstrap, use either a  `<button>`  or an  `<a>`  element with a `.btn`  class as well as a second class to control the background color: `.btn-primary`, `.btn-danger`, etc.
+```html
+<button type="button" class="btn btn-primary">Primary</button>
+```
+
+### Carousel
+The basic Bootstrap 4 carousel can be set up with the following HTML structure:
+```html
+<div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div>
+```
+Let’s take a look at some of the details of the carousel’s structure:
+- **One of the carousel items has to have the `.active` class; otherwise, the carousel will not be visible**. This is usually the first item.
+- The class  `.d-block`  gives the element a display value of block. There are other `d-*` classes in Bootstrap for other display values. You can find all the available options in [Bootstrap’s Display property](https://getbootstrap.com/docs/4.3/utilities/display/) documentation.
+- The  `.w-100`  class is a sizing class that controls the width of an element. The available classes are  `w-100`,  `w-75`,  `w-50`,  `w-25`, and  `w-auto`,  which respectively give an element width values of 100%, 75%, 50%, 25%, and auto relative to its parent.
+- To make sure that you prevent default browser image alignment in the carousel, add the classes  `.d-block`  and  `.w-100`  to its  `<img>`  elements.
+
+Let’s give our users a bit more control by adding **previous and next controls**.
+```html
+<div id="carouselControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        [... carrousel items ...]
+    </div>
+    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+```
+
+### Alerts
+A simple alert can be implemented in Bootstrap by adding the  `.alert`  class to a  `<div>`  and adding a  `role=”alert”`  attribute to it. To control the background color of the alert, you need to also add a class of  `.alert-{value}`  to the  `<div>`, where  `{value}`  is any one of `primary, secondary, success,  danger, warning, info, light, dark`. The default colors of each of these values are the same as those for the  `.bg-*`  and  `.button-*`  classes you’ve seen earlier in this course. So to create a simple  “success”  alert (default color is green), you add this  `<div>`  to your page:
+```html
+<div class="alert alert-success" role="alert">
+    You’ve successfully done the thing you did!
+</div>
+```
+Option to dismiss an alert after they’ve seen it. To to this, you need to add the classes  `.alert-dismissible`,  `.fade`, and  `.show`  to the alert  `<div>`  and add a  “close”  button to allow for the dismissal.
+```html
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    You’ve successfully done the thing you did!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+```
