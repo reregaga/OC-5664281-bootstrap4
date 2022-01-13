@@ -11,10 +11,10 @@ _Wrapping your content in a div with the  .container-fluid  class creates a co
 
 ## Question 2
 **The correct basic hierarchy of the classes used to create a Bootstrap grid is:**
-- [ ] Container > column > row
-- [ ] Row > column > container
-- [x] Container > row > column
-- [ ] Column > container > row
+- [ ] Container &gt; column &gt; row
+- [ ] Row &gt; column &gt; container
+- [x] Container &gt; row &gt; column
+- [ ] Column &gt; container &gt; row
 
 _The basic hierarchy of the Bootstrap grid is that of a container that contains rows, which in turn contain columns._
 
@@ -29,17 +29,17 @@ _Containers can contain multiple rows, and rows can contain multiple columns._
 
 ## Question 4
 **How many columns will each of the divs with the  .col  class in this code snippet take up?
-<div class="row">
-    <div class="col">
+&lt;div class="row"&gt;
+    &lt;div class="col"&gt;
         ...
-    </div>
-    <div class="col">
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
         ...
-    </div>
-    <div class="col">
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
         ...
-    </div>
-</div>**
+    &lt;/div&gt;
+&lt;/div&gt;**
 - [ ] 2
 - [ ] 3
 - [x] 4
@@ -48,25 +48,25 @@ _Containers can contain multiple rows, and rows can contain multiple columns._
 _The default Bootstrap grid is based on a 12-column structure which means that using the .col class without any size modifier will divide the grid equally in all viewports between the divs in a row. In this case, the 12 columns will be divided equally between the three divs, giving each one a width of four columns._
 
 ## Question 5
-**Which of the following will create a row that contains two <divs>, the first taking up 1/4 of its width and the second taking up 3/4 of its width:**
-- [x] <div class="row">
-    <div class="col-3">...</div>
-    <div class="col-9">...</div>
-</div>
-- [ ] <div class="row">
-    <div class="col-1">...</div>
-    <div class="col-3">...</div>
-</div>
-- [ ] <div class="row">
-    <div class="col-4">...</div>
-    <div class="col-3">...</div>
-</div>
-- [ ] <div class="row">
-    <div class="col-4">...</div>
-    <div class="col-8">...</div>
-</div>
+**Which of the following will create a row that contains two &lt;divs&gt;, the first taking up 1/4 of its width and the second taking up 3/4 of its width:**
+- [x] &lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;...&lt;/div&gt;
+    &lt;div class="col-9"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+- [ ] &lt;div class="row"&gt;
+    &lt;div class="col-1"&gt;...&lt;/div&gt;
+    &lt;div class="col-3"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+- [ ] &lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-3"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+- [ ] &lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
 
-_Since Bootstrap is based on a 12 column grid, a <div> that takes up 1/4 of the width would span three columns and therefore have a class of  .col-3 , whereas the second <div> would span nine columns and have a class of  .col-9._
+_Since Bootstrap is based on a 12 column grid, a &lt;div&gt; that takes up 1/4 of the width would span three columns and therefore have a class of  .col-3 , whereas the second &lt;div&gt; would span nine columns and have a class of  .col-9._
 
 ## Question 6
 **In the context of front-end design and development, a breakpoint is:**
@@ -78,11 +78,11 @@ _Since Bootstrap is based on a 12 column grid, a <div> that takes up 1/4 of the 
 _In the context of front-end design and development, a breakpoint is a point at which the layout of a page may change. It is usually expressed as a number representing the number of pixels that represent the width of the viewport at which the breakpoint occurs._
 
 ## Question 7
-**Based on the following code, which viewport sizes will have each of the column <div>’s take up half of the width of the row:
-<div class="row">
-    <div class="col-6 col-md-4">...</div>
-    <div class="col-6 col-md-8">...</div>
-</div>**
+**Based on the following code, which viewport sizes will have each of the column &lt;div&gt;’s take up half of the width of the row:
+&lt;div class="row"&gt;
+    &lt;div class="col-6 col-md-4"&gt;...&lt;/div&gt;
+    &lt;div class="col-6 col-md-8"&gt;...&lt;/div&gt;
+&lt;/div&gt;**
 - [x] Extra-small
 - [x] Small
 - [ ] Medium
@@ -93,29 +93,29 @@ _The  .col-6  class has no size related class modifier, so it applies to extra
 
 ## Question 8
 **Which of the following grid structures will have the following responsive behavior: half the width on small and extra-small viewports; ⅓ the width on medium viewports; and ¼ of the width on large and extra-large viewport.**
-- [ ] <div class="row">
-    <div class="col-6 col-md-3 col-lg-4">
+- [ ] &lt;div class="row"&gt;
+    &lt;div class="col-6 col-md-3 col-lg-4"&gt;
         ...
-    </div>
+    &lt;/div&gt;
         ...
-</div>
-- [ ] <div class="row">
-    <div class="col-2 col-md-3 col-lg-4">
+&lt;/div&gt;
+- [ ] &lt;div class="row"&gt;
+    &lt;div class="col-2 col-md-3 col-lg-4"&gt;
         ...
-    </div>
+    &lt;/div&gt;
         ...
-</div>
-- [x] <div class="row">
-    <div class="col-6 col-md-4 col-lg-3">
+&lt;/div&gt;
+- [x] &lt;div class="row"&gt;
+    &lt;div class="col-6 col-md-4 col-lg-3"&gt;
         ...
-    </div>
+    &lt;/div&gt;
         ...
-</div>
-- [ ] <div class="row">
-    <div class="col-sm-6 col-md-4 col-lg-3">
+&lt;/div&gt;
+- [ ] &lt;div class="row"&gt;
+    &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;
         ...
-    </div>
+    &lt;/div&gt;
         ...
-</div>
+&lt;/div&gt;
 
-_Since the requirement is for extra-small and small viewports to span half the width of the grid, the  .col-6  class would apply to extra-small viewports upwards. Adding the  .col-md-4  would override this for medium viewports upwards, resulting in the <div> spanning four out of the 12 columns (i.e. ⅓). Finally, adding the  .col-lg-3  class would override the previous classes for large viewports upwards, resulting in the <div> spanning three out of the 12 columns (i.e. ¼)._
+_Since the requirement is for extra-small and small viewports to span half the width of the grid, the  .col-6  class would apply to extra-small viewports upwards. Adding the  .col-md-4  would override this for medium viewports upwards, resulting in the &lt;div&gt; spanning four out of the 12 columns (i.e. ⅓). Finally, adding the  .col-lg-3  class would override the previous classes for large viewports upwards, resulting in the &lt;div&gt; spanning three out of the 12 columns (i.e. ¼)._
