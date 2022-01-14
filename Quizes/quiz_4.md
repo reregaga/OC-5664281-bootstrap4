@@ -1,3 +1,5 @@
+**Attention!** Last two questions contains semi-correct explanation, BUT contains de-facto (for openclassrooms server) correct and de-jure incorrect answers.
+
 [Quiz](https://openclassrooms.com/en/courses/5664281-create-responsive-websites-efficiently-with-bootstrap-4/exercises/3622)
 # Check Your Understanding of Interactive Components
 
@@ -61,7 +63,9 @@ _The  &lt;input type="range"&gt;  requires a  .form-control-range  class, wh
 - [ ] &lt;div class="mt-3 mt-md-0"&gt;...&lt;/div&gt;
 - [ ] &lt;div class="mt-3 mt-0-md"&gt;...&lt;/div&gt;
 
-_The Bootstrap spacing utilities use the format:  {property}{sides}-[{breakpoint}-]{size}._
+_The Bootstrap spacing utilities use the format:  {property}{sides}-[{breakpoint}-]{size}.
+The  .mt-5  class will give margin top of 5 (which sets it to 3 rem). Since it has no size based class modifier, it applies to all viewports from extra-small upwards. 
+The  .mt-md-0  class overrides the earlier class. It will give a margin top of 0. Since it uses the md class modifier, it will apply this margin to medium viewports upwards._
 
 ## Question 8
 **Which of the following combination of classes will give an element a left and right padding of 3 rem on large viewports and larger and 1 rem on other viewports?**
@@ -70,4 +74,6 @@ _The Bootstrap spacing utilities use the format:  {property}{sides}-[{breakpoin
 - [ ] &lt;div class="plr-3 plr-lg-5"&gt;...&lt;/div&gt;
 - [ ] &lt;div class="plr-1 plr-lg-3"&gt;...&lt;/div&gt;
 
-_The Bootstrap spacing utilities use the format:  {property}{sides}-[{breakpoint}-]{size}._
+_The Bootstrap spacing utilities use the format:  {property}{sides}-[{breakpoint}-]{size}.
+The  .px-3  class will give padding of 3 (which sets it to 1 rem) to the left and right (ie., both sides in the x-direction). Since it has no size based class modifier, it applies to all viewports from extra-small upwards. 
+The  .px-lg-3  class overrides the earlier class. It will give a padding of 5 (which sets it to 3 rem) to the left and right. Since it uses the lg class modifier, it will apply this margin to large viewports upwards._
